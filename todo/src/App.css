@@ -1,0 +1,54 @@
+.App {
+    height: 100%;
+    text-align: center;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.app-body {
+    height: 100vh;
+    background: whitesmoke;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 5px auto;
+    background: white;
+}
+
+form {
+    margin: 20px auto;
+}
+
+.buttons,
+input {
+    margin: 0px 15px;
+    padding: 5px;
+}
+
+.list-values {
+    margin: 10px;
+}
+
+.buttons {
+    border-radius: 25px;
+    background: #404a5f;
+    color: white;
+    box-shadow: 2px 2px silver;
+}
