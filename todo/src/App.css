@@ -1,4 +1,5 @@
 .App {
+    height: 100%;
     text-align: center;
 }
 
@@ -11,4 +12,22 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.app-body {
+    height: 100vh;
+    background: whitesmoke;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 5px auto;
+    background: white;
 }

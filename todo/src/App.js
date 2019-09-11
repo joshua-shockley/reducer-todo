@@ -1,15 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState, useReducer} from 'react';
+import ReactDOM from 'react-dom';
 import './App.css';
+import TodoForm from './components/TodoForm';
+import {Todo} from './components/Todo.js';
+import { initialState, todoReducer } from './reducers/TodoReducer';
+
 
 function App() {
+  const [state, dispatch] = useReducer(todoReducer, initialState)
+  
+  
+  const addStuff = (item, dueBy) => dispatch({type: 'ADD-TODO', text: item, day: dueBy})
+  const deleteStuff = () => dispatch({type: 'DELETE-TODO'})
+  const toggleTodo  = (id) => dispatch({type: 'TOGGLE-COMPLETED',payload: id })
   return (
     <div className="App">
       <header className="App-header">
-      see this in App.js
+      Welcome To Another Installation Of: To Do List!
       </header>
-      <div>
-        
+      <div className="app-body">
+        <TodoForm 
+        todo={state.todo}
+        addStuff={addStuff}
+        deleteStuff={deleteStuff}/>
+        <Todo 
+        todo={state.todo}
+        toggleTodo={toggleTodo}
+        />
       </div>
     </div>
   );
