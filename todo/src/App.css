@@ -31,3 +31,24 @@ section {
     margin: 5px auto;
     background: white;
 }
+
+form {
+    margin: 20px auto;
+}
+
+.buttons,
+input {
+    margin: 0px 15px;
+    padding: 5px;
+}
+
+.list-values {
+    margin: 10px;
+}
+
+.buttons {
+    border-radius: 25px;
+    background: #404a5f;
+    color: white;
+    box-shadow: 2px 2px silver;
+}

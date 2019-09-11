@@ -26,10 +26,10 @@ export const todoReducer = (state, action) => {
                 ...state,
                 todo: [...state.todo,
                     {
-                        item: action.text,
+                        item: action.payload.item,
                         completed: false,
                         id: Date.now(),
-                        dueBy: action.day
+                        dueBy: action.payload.dueBy
                     }
                 ]
             };

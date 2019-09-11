@@ -10,7 +10,7 @@ function App() {
   const [state, dispatch] = useReducer(todoReducer, initialState)
   
   
-  const addStuff = (item, dueBy) => dispatch({type: 'ADD-TODO', text: item, day: dueBy})
+  const addStuff = (bananaWord) => dispatch({type: 'ADD-TODO',payload: bananaWord})
   const deleteStuff = () => dispatch({type: 'DELETE-TODO'})
   const toggleTodo  = (id) => dispatch({type: 'TOGGLE-COMPLETED',payload: id })
   return (
@@ -24,6 +24,7 @@ function App() {
         addStuff={addStuff}
         deleteStuff={deleteStuff}/>
         <Todo 
+        key={state.todo.id}
         todo={state.todo}
         toggleTodo={toggleTodo}
         />

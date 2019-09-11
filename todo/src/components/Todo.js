@@ -6,8 +6,7 @@ export const Todo= (props) =>{
 
 
 let toDoList = props.todo;
-console.log(props.item);
-console.log(toDoList);
+// console.log(toDoList);
     return(
         <div>
             <h1>Stuff To Do</h1>
@@ -15,7 +14,11 @@ console.log(toDoList);
                 <section 
                 onClick={() => props.toggleTodo(theDo.id)} 
                 className={theDo.completed ? "completed" : ""} 
-                >{theDo.item}</section>
+                >
+                <div className="list-values" >{theDo.item}</div>
+                <div className="list-values" >By: {theDo.dueBy}</div>
+                </section>
+                
             ))}
         </div>
     );

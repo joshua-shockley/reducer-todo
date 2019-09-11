@@ -4,13 +4,10 @@ import React, {useState} from 'react';
 export default function TodoForm (props) {
 
 
-const[newTodo, setNewTodo]= useState('');
-const [newDate, setNewDate]=useState('');
-    // console.log(props);
+const[newTodo, setNewTodo]= useState({item: '', dueBy: '' });
 
 const handleChange = event => {
-setNewTodo( event.target.value);
-setNewDate( event.target.value);
+setNewTodo({...newTodo, [event.target.name]: event.target.value} );
 
 }
 const handleClick = event => {
@@ -19,33 +16,33 @@ const handleClick = event => {
 }
 const handleSubmit = e => {
     e.preventDefault();
-    props.addStuff(newTodo, newDate);
+    props.addStuff(newTodo);
     setNewTodo('');
 }
-console.log(props.todo);
+// console.log(props.todo);
     return(
         <form >
             <input
             type="text"
-            name="newtodo"
+            name="item"
             placeholder="add new todo"
             onChange={handleChange}
-            value={newTodo}
+            value={newTodo.item}
             />
-            {/* <input
+            <input
             type="text"
             name="dueBy"
             placeholder="Due By What WeekDay"
             onChange={handleChange}
-            value={newDate}
-            /> */}
-            <button 
+            value={newTodo.dueBy}
+            />
+            <button className="buttons" 
             type="submit"
             onClick={handleSubmit}
             >
             add new todo
             </button>
-            <button onClick={handleClick}>clear completed</button>
+            <button className="buttons" onClick={handleClick}>clear completed</button>
         </form>
     );
 };
