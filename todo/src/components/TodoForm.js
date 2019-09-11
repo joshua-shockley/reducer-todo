@@ -22,6 +22,7 @@ const handleSubmit = e => {
 // console.log(props.todo);
     return(
         <form >
+            <fieldset>
             <input
             type="text"
             name="item"
@@ -43,6 +44,7 @@ const handleSubmit = e => {
             add new todo
             </button>
             <button className="buttons" onClick={handleClick}>clear completed</button>
+        </fieldset>
         </form>
     );
 };
