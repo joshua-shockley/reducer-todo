@@ -4,13 +4,7 @@ import React from 'react';
 
 export const initialState = {
     todo: [{
-            item: 'learn about reducers',
-            completed: false,
-            id: 3892987589,
-            dueBy: 'thursday'
-        },
-        {
-            item: 'figure out what im doing',
+            item: 'click on item to mark done... click clear completed to remove from list',
             completed: false,
             id: 3892997658,
             dueBy: 'friday'
