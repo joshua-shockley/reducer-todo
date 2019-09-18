@@ -45,6 +45,6 @@ const handleSubmit = e => {
             </button>
             <button className="buttons" onClick={handleClick}>clear completed</button>
         </fieldset>
-        </form>
+          </form>
     );
 };
